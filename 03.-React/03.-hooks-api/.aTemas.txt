@@ -1,0 +1,41 @@
+------------------------------------- APP------------------------------
+Custom Hooks
+
+Fetch hacia un API
+
+Comunicación entre componentes
+
+Clases de CSS
+
+Animaciones
+
+Enviar métodos como argumentos
+
+Crear listados
+
+keys
+
+Giphy
+
+Esta es una aplicación pequeña pero muy ilustrativa que explica cómo utilizar React + customHooks para poder resolver necesidades en específico que podremos re-utilizar después.
+
+
+
+-------------------------------------TEST-------------------------------------
+Seguir el camino de las pruebas
+
+Pruebas en componentes específicos
+
+Pruebas en componentes de forma individual
+
+Pruebas con customHooks
+
+Esperar cambios en un customHook
+
+Simular eventos en inputs y formularios
+
+Simular llamadas a funciones
+
+Evaluar si existen elementos en el componente
+
+En esta sección seguiremos expandiendo todo lo que habíamos visto anteriormente en otras secciones de pruebas, pero ahora veremos más a detalle los temas y adicionalmente introduciremos nuevos conceptos y nuevos tipos de pruebas.

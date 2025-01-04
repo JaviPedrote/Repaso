@@ -1,0 +1,41 @@
+Exposiciones sobre los componentes
+
+Creación de componentes (Functional Components)
+
+Propiedades - Props
+
+Impresiones en el HTML
+
+PropTypes
+
+DefaultProps
+
+Introducción general a los Hooks
+
+useState
+
+---------------------------------------pruebas-----------------------------
+
+AAA
+
+Arrange - Arreglar
+
+Act - Actuar
+
+Assert - Afirmar
+
+Primeras pruebas
+
+Jest
+
+Expect
+
+toBe
+
+Enzyme
+
+Comandos útiles en la terminal para pruebas
+
+Revisar elementos renderizados en el componente
+
+Simular eventos
