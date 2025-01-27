@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Inter", sans-serif;
+  --color-primary: #316ff3;
+  --color-secondary: #f38e31;
+}
+
+.btn-primary {
+  @apply bg-[var(--color-primary)] text-white font-sans px-4 py-2 rounded;
+}
+
+.btn-secondary {
+  @apply bg-[#f38e31] text-white font-sans px-4 py-2 rounded;
+}
