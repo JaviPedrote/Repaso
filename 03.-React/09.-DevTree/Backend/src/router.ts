@@ -1,14 +1,15 @@
 //cSpell:disable
 import { Router } from "express";
 import { body } from "express-validator";
-import { createUser, login } from "./handlers/index";
+import { createUser, getUser, login } from "./handlers/index";
 import { handleInputErrors } from "./middleware/validations";
+import { authenticate } from "./middleware/auth";
 
 const router = Router();
 
 // Autenticacion y registro
 router.post(
-  "/auth/register",
+  "/api/auth/register",
   [
     body("handle").notEmpty().withMessage("El nombre de usuario es requerido"),
     body("name").notEmpty().withMessage("El nombre es requerido"),
@@ -22,11 +23,13 @@ router.post(
 );
 
 router.post(
-  "/auth/login",
+  "/api/auth/login",
   body("email").isEmail().withMessage("Email no valido"),
   body("password").notEmpty().withMessage("La contraseña puede estar vacía"),
   handleInputErrors,
   login
 );
+
+router.get("/user",authenticate, getUser);
 
 export default router;

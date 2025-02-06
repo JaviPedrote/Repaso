@@ -6,6 +6,7 @@
   --color-secondary: #f38e31;
 }
 
+
 .btn-primary {
   @apply bg-[var(--color-primary)] text-white font-sans px-4 py-2 rounded;
 }

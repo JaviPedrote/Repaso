@@ -1,25 +1,39 @@
 // cSpell:disable
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import  {isAxiosError} from "axios";
+import type { RegisterForm } from "../types";
+import {toast} from 'sonner'
 import { ErrorMessage } from "../components/ErrorMessage";
+import api from "../config/axios";
 
-const initialValues = {
+const initialValues:RegisterForm = {
   name: "",
   email: "",
   handle: "",
   password: "",
   password_confirmation: "",
 };
-export const Register = () => {
+export const RegisterView = () => {
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
 
-  const handleRegister = (data: any) => {
-    console.log("desde registrer");
+  const handleRegister = async(formData:RegisterForm) => {
+    try {
+      const { data } = await api.post(`/api/auth/register`, formData);
+      toast.success(data)
+      reset();
+      
+    } catch (error) {
+      if(isAxiosError(error)){
+        toast.error(error.response?.data.error)
+      }
+    }
   };
 
   const password = watch("password");
@@ -91,8 +105,8 @@ export const Register = () => {
             {...register("password", {
               required: "El password es obligatorio",
               minLength: {
-                value: 8,
-                message: "El password debe tener al menos 8 caracteres",
+                value: 6,
+                message: "El password debe tener al menos 6 caracteres",
               },
             })}
           />
