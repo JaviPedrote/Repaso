@@ -7,16 +7,16 @@ const AppRouter = () => {
 
   type auth = "autenticado" | "noAutenticado" | "cargando";
 
-  const autenticado: auth = "autenticado";
+  // const autenticado: auth = "noAutenticado";
   
 
 
   return (
     <Routes>
-      {(autenticado === "autenticado") ?
+      {/* {(autenticado === "noAutenticado") ? */}
         <Route path="/auth/*" element={<AuthRoutes />} /> :
         <Route path="/*" element={<ShopRoutes />} />
-      }
+      {/* } */}
       <Route path="*" element={<Navigate to="/auth/login" />} />
     </Routes>
   );

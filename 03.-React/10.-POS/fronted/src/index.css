@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.btnNavbar {
+  @apply  text-white font-bold cursor-pointer my-2 mx-4 rounded hover:text-green-500 transition duration-200;
+}
